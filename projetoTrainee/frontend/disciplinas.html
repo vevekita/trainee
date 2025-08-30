@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestão de Disciplinas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestão Acadêmica CS IEEE UEM</h1>
+        <nav>
+            <ul>
+                <li><a href="universidades.html">Universidades</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="disciplinas.html" class="active">Disciplinas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteudo-principal">
+        <section class="formulario-container">
+            <h2 id="titulo-formulario">Cadastrar Disciplina</h2>
+            <form id="form-disciplina">
+                <input type="hidden" id="disciplina-id">
+
+                <div class="grupo-formulario">
+                    <label for="disciplina-curso">Curso:</label>
+                    <select id="disciplina-curso" required>
+                        <option value="">-- Carregando cursos... --</option>
+                    </select>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="disciplina-nome">Nome da Disciplina:</label>
+                    <input type="text" id="disciplina-nome" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="disciplina-carga">Carga Horária (horas):</label>
+                    <input type="number" id="disciplina-carga" min="20" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="disciplina-semestre">Semestre:</label>
+                    <input type="text" id="disciplina-semestre" placeholder="Ex: 1, 2, Opcional..." required>
+                </div>
+                <button type="submit" id="btn-salvar">Salvar Disciplina</button>
+            </form>
+        </section>
+
+        <section class="lista-container">
+            <h2>Disciplinas Cadastradas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Disciplina</th>
+                        <th>Carga Horária</th>
+                        <th>Curso</th>
+                        <th>Semestre</th>
+                        <th>Ações</th> </tr>
+                </thead>
+                <tbody id="lista-disciplinas">
+                    </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="js/disciplinas.js"></script>
+</body>
+</html>

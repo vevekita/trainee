@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestão de Universidades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestão Acadêmica CS IEEE UEM</h1>
+        <nav>
+            <ul>
+                <li><a href="universidades.html" class="active">Universidades</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="disciplinas.html">Disciplinas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteudo-principal">
+        <section class="formulario-container">
+            <h2 id="titulo-formulario">Cadastrar Universidade</h2>
+            <form id="form-universidade">
+                <input type="hidden" id="universidade-id">
+
+                <div class="grupo-formulario">
+                    <label for="uni-nome">Nome da Universidade:</label>
+                    <input type="text" id="uni-nome" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="uni-sigla">Sigla:</label>
+                    <input type="text" id="uni-sigla" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="uni-data-criacao">Data de Criação:</label>
+                    <input type="date" id="uni-data-criacao" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="uni-publica">Tipo de Gestão:</label>
+                    <select id="uni-publica" required>
+                        <option value="1">Pública</option>
+                        <option value="0">Privada</option>
+                    </select>
+                </div>
+                <button type="submit" id="btn-salvar">Salvar Universidade</button>
+            </form>
+        </section>
+
+        <section class="lista-container">
+            <h2>Universidades Cadastradas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Sigla</th>
+                        <th>Data de Criação</th>
+                        <th>Pública</th>
+                        <th>Ações</th> </tr>
+                </thead>
+                <tbody id="lista-universidades">
+                    </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="js/universidades.js"></script>
+</body>
+</html>
