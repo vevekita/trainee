@@ -1,0 +1,128 @@
+:root {
+    --cor-1: #0d47a1;
+    --cor-2: #5472d3;
+    --cor-3: #002171;
+    --fundo: #f4f5f7;
+    --superficie: #ffffff;
+    --texto: #333;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+header {
+    background-color: var(--cor-3);
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #e3f2fd;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+nav a:hover, nav a.active {
+    background-color: var(--cor-2);
+    color: white;
+}
+
+main.conteudo-principal {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.formulario-container, .lista-container {
+    background-color: var(--superficie);
+    padding: 2rem;
+    border-radius:  8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-top: 0;
+    color: var(--cor-3);
+    border-bottom: 2px solid var(--cor-1);
+    padding-bottom: 0.5rem;
+}
+
+.grupo-formulario {
+    margin-bottom: 1.5rem;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--cor-1);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s; 
+}
+
+button[type="submit"]:hover {
+    background-color: var(--cor-2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+thead th {
+    background-color: #eef2f9;
+}
